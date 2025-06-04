@@ -17,7 +17,8 @@
         <h2 class="text-4xl font-bold mb-6 text-center">Sign In</h2>
        
 
-        <form action="#"   class="space-y-4">
+        <form class="space-y-4" onsubmit="event.preventDefault(); window.location.href='/Home';">
+
           <div>
             <label class="block font-semibold mb-1" for="Email">Email</label>
             <input
@@ -41,12 +42,15 @@
               <a href="#" class="text-white underline">Forgot <strong>Password?</strong></a>
             </div>
           </div>
-          <button
+          
+            <button
             type="submit"
             class="w-full bg-white text-orange-500 font-bold py-2 rounded-md hover:bg-gray-100 transition"
           >
             Sign In
           </button>
+          
+          
         </form>
         <p class="mt-6 text-center text-white">
           Don't have an account?
