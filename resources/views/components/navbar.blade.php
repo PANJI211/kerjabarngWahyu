@@ -26,8 +26,8 @@
 
             <!-- Right menu -->
             <div class="flex space-x-6">
-                <a href="#" class="text-gray-700 hover:text-blue-600">Sign In</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Sign Up</a>
+                <a href="{{ route('login') }}" class="text-gray-700 hover:text-blue-600">Sign In</a>
+                <a href="{{ route('Register') }}" class="text-gray-700 hover:text-blue-600">Sign Up</a>
             </div>
         </div>
     </nav>
