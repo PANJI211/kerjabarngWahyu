@@ -18,5 +18,4 @@ Route::get('/Home', function () {
     return view("after-login");
 })->name('');
 
-
  

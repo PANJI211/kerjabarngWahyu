@@ -10,6 +10,16 @@
 <body>
     <x-navbar></x-navbar>
     <x-jumbotron></x-jumbotron>
+<<<<<<< HEAD
+=======
+    
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5b6b39e5111357882f6a58dca98865cde5b30b36
+    {{ $slot }}
+  
+>>>>>>> a313458644dfdfdbc8799ef1bb1f2c41ef9e593b
 
     @vite('resources/js/app.js')
 </body>
