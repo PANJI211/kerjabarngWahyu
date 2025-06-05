@@ -10,8 +10,8 @@
 <body class="bg-gray-100">
 
     <!-- Sticky Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full shadow-md z-50">
-    <div class="container mx-auto px-4 py-3 flex items-center bg-[#f87f07] justify-between text-white">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 w-full shadow-md z-50 m-0 p-0">
+    <div class="w-full px-6 py-3 flex items-center bg-gradient-to-r from-orange-500 to-yellow-500 justify-between text-white">
         <!-- Left menu -->
         <div class="flex space-x-6">
             <a href="#" class="hover:text-blue-200">Home</a>
