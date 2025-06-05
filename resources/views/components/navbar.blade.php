@@ -10,7 +10,7 @@
 <body class="bg-gray-100">
 
     <!-- Sticky Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-#f87f07 shadow-md z-50">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <!-- Left menu -->
             <div class="flex space-x-6">
