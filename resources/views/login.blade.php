@@ -20,6 +20,16 @@
         <form class="space-y-4" onsubmit="event.preventDefault(); window.location.href='/Home';">
 
           <div>
+            <label class="block font-semibold mb-1" for="Username">Username</label>
+            <input
+              id="Username"
+              type="text"
+              placeholder="Username"
+              required
+              class="w-full px-4 py-2 rounded-md text-black bg-white focus:outline-none"
+            />
+          </div>
+          <div>
             <label class="block font-semibold mb-1" for="Email">Email</label>
             <input
               id="Email"
