@@ -20,7 +20,7 @@
 
         <!-- Center logo and text -->
         <div class="flex items-center space-x-2">
-            <img src="https://www.svgrepo.com/show/499939/canteen.svg" alt="Logo" class="w-8 h-8 rounded-full bg-black p-1" />
+            <img src="{{asset('./imgs/white.png')}}" alt="Logo" class="w-10 h-10" />
             <span class="font-semibold">Kantin sekolah</span>
         </div>
 
