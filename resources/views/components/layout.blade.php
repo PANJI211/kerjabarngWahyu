@@ -11,7 +11,10 @@
     <x-navbar></x-navbar>
     <x-jumbotron></x-jumbotron>
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5b6b39e5111357882f6a58dca98865cde5b30b36
     {{ $slot }}
   
 
