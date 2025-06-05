@@ -10,9 +10,6 @@
 <body>
     <x-navbar></x-navbar>
     <x-jumbotron></x-jumbotron>
-    
-    {{ $slot }}
-  
 
     @vite('resources/js/app.js')
 </body>
