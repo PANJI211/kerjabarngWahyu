@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('auth.login');
 })->name('login');
 
 Route::get('/Register', function () {
@@ -16,7 +16,7 @@ Route::get('/Register', function () {
 
 Route::get('/Home', function () {
     return view("after-login");
-})->name('home');
+})->name('');
 
 
  
