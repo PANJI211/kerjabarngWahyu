@@ -14,28 +14,41 @@
    
       <!-- Left (Form) -->
       <div class="bg-orange-400 text-white max-w-2xl h-[500px] p-10 rounded-2xl items-center flex-1">
+     @if (session('failed'))
+      <div class="mb-4 p-4 rounded-lg bg-red-100 text-red-700 border border-red-300">
+        <strong>Login Failed:</strong> {{ session('failed') }}
+      </div>
+    @endif
         <h2 class="text-4xl font-bold mb-6 text-center">Sign In</h2>
-       
+        <form class="space-y-4" action="/login" method="post" >
+          @csrf
 
-        <form class="space-y-4" onsubmit="event.preventDefault(); window.location.href='/Home';">
-
+          {{-- email --}}
+          @error('email')
+          <small class="text-danger">{{$message}}</small>
+          @enderror
           <div>
             <label class="block font-semibold mb-1" for="Email">Email</label>
             <input
-              id="Email"
+              id="email"
               type="email"
+              name="email"
               placeholder="Email"
-              required
               class="w-full px-4 py-2 rounded-md text-black bg-white focus:outline-none"
             />
           </div>
+
+          {{-- password --}}
+          @error('password')
+          <small class="text-danger">{{$message}}</small>
+          @enderror
           <div>
             <label class="block font-semibold mb-1" for="password">Password</label>
             <input
             id="password"
             type="password"
+            name="password"
             placeholder="Password"
-            required  
             class="w-full px-4 py-2 rounded-md text-black bg-white focus:outline-none"
           />
             <div class="text-sm text-right mt-1">
