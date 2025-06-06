@@ -8,10 +8,10 @@
     <title>Layout_Home</title>
 </head>
 <body class="scroll-smooth">
-    <x-navbar></x-navbar>
+    @include('components.navbar')
     
 
-
+    @include('components.footer')
     {{ $slot }} 
     @vite('resources/js/app.js')
 </body>
