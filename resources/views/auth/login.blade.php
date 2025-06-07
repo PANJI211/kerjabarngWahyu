@@ -14,6 +14,8 @@
    
       <!-- Left (Form) -->
       <div class="bg-orange-400 text-white max-w-2xl h-[500px] p-10 rounded-2xl items-center flex-1">
+
+        
      @if (session('failed'))
       <div class="mb-4 p-4 rounded-lg bg-red-100 text-red-700 border border-red-300">
         <strong>Login Failed:</strong> {{ session('failed') }}

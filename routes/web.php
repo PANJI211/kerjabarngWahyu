@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+
+
 
 Route::get('/', function () {
     return view('pages.before-login');
@@ -14,6 +17,9 @@ Route::get('/login', function () {
 // method post 
 Route::post('/login', [Authcontroller::class, 'login']);
 
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+
 Route::get('/Register', function () {
     return view("auth.Register");
 })->name('Register');
@@ -23,10 +29,8 @@ Route::get('/Home', function () {
 })->name('');
 
 
-Route::get('/dashboard', function () {
-    return view("pages.dashboard");
-})->name('dashboard');
-
+Route::get('/logout',[Authcontroller::class, 'logout']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
  
