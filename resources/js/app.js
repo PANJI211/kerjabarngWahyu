@@ -4,12 +4,12 @@ let currentIndex = 0;
         const slides = document.getElementById('slides');
         const totalSlides = document.querySelectorAll('.slide').length;
         const dots = document.querySelectorAll('.dot');
-
+        
         // Function to update slider position
         function updateSlider() {
             const translateX = -currentIndex * 100;
             slides.style.transform = `translateX(${translateX}%)`;
-
+            
             // Update dots
             dots.forEach((dot, index) => {
                 if (index === currentIndex) {
@@ -21,7 +21,7 @@ let currentIndex = 0;
                 }
             });
         }
-
+        
         // Next slide function
         function nextSlide() {
             currentIndex = (currentIndex + 1) % totalSlides;
