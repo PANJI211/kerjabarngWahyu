@@ -13,7 +13,7 @@
     class="absolute right-30 w-150 -z-10 -rotate-15 ">
    
       <!-- Left (Form) -->
-      <div class="bg-orange-400 text-white max-w-2xl h-[500px] p-10 rounded-2xl items-center flex-1">
+      <div class="bg-gradient-to-b from-orange-500 to-yellow-500 text-white max-w-2xl h-[500px] p-10 rounded-2xl items-center flex-1">
 
         
      @if (session('failed'))

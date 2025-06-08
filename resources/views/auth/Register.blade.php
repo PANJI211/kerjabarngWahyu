@@ -14,7 +14,7 @@
          class="absolute right-10 bottom-10 w-40 -rotate-12 -z-10">
 
     <!-- Register Form -->
-    <div class="bg-orange-400 text-white w-full max-w-md p-8 rounded-xl shadow-lg">
+    <div class="bg-gradient-to-b from-orange-500 to-yellow-500 text-white w-full max-w-md p-8 rounded-xl shadow-lg">
         <h2 class="text-3xl font-bold mb-6 text-center">Sign Up</h2>
 
         <form action="#" class="space-y-4 text-sm">
