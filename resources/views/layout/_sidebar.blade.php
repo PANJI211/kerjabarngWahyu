@@ -4,7 +4,7 @@
             <div class="text-center">
                 <div class="text-xl font-bold">Kantin Sekolah</div>
                 <div class="text-sm text-gray-400 mt-1">
-                    <a href="#">{{ auth()->user()->name }}</a>
+                    {{-- <a href="#">{{ auth()->user()->name }}</a> --}}
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
                 Dashboard
             </a>
             <a href="/users" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('users') ? 'bg-gray-700' : '' }}">
-                Users
+                Admin
             </a>
            
                

@@ -4,7 +4,7 @@
         <div class="flex flex-col lg:flex-row items-center pt-48 ">
 
             <!-- Kiri: Teks -->
-            <div class="flex-1 text-left space-y-4 lg:space-y-6 lg:pr-10 order-2 lg:order-1">
+            <div class="flex-1 items-center text-left space-y-4 lg:space-y-6 pl-10 order-2 lg:order-1">
                 <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-snug">
                     Selamat Datang <br />
                     Di <span class="text-white">Kantin Sekolah</span>
@@ -57,7 +57,7 @@
     <section id="Special Menu" class="min-h-screen flex-1 text-center lg:text-left"> 
           <h1 class="text-center text-3xl text-white font-bold mb-20 pt-24">Special Menu</h1>
            <div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center px-6 lg:px-0 ">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 justify-items-center px-6 lg:px-0 ">
                 <!-- Card Makanan -->
                 @for ($i = 0; $i < 4; $i++)
                     <div class="bg-[#5E5050] rounded-xl p-4 shadow-lg text-center w-full sm:w-64">
@@ -68,12 +68,11 @@
                         <p class="text-sm text-gray-300 mt-2">Cocok untuk sarapan dan mengenyangkan</p>
                         <div class="mt-4 flex items-center justify-between px-4">
                             <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Rp 5.000,00</span>
-                            <button class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-3 py-1 sm:px-4 sm:py-1 rounded-full text-sm shadow-md hover:scale-105 transition duration-300">Order</button>
+                            <a  href="{{ route('login') }}" class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-3 py-1 sm:px-4 sm:py-1 rounded-full text-sm shadow-md hover:scale-105 transition duration-300">Order</a>
                         </div>
                     </div>
                 @endfor
             </div>
            </div>
-      
     </section>
 </x-layout>
