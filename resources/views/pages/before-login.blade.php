@@ -1,28 +1,30 @@
 <x-layout>
-    <!DOCTYPE html>
-    <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        @vite('resources/css/app.css')
-    </head>
-    <body class="m-0 p-0 scroll-smooth">
-    
-        <!-- Section Jumbotron -->
-        <section id="home" class="min-h-screen flex flex-col justify-center items-center bg-white px-4">
-            <img src="{{ asset('imgs/orange.png') }}" alt="Canteen" class="w-60 h-60 object-cover mb-4">
-            <h1 class="text-xl font-semibold text-gray-800">Selamat datang di Kantin Sekolah</h1>
-            <div class="mt-3 space-x-2">
-                <span class="text-gray-600">Lihat</span>
-                <a href="#slider" class="bg-gradient-to-b from-orange-500 to-yellow-500 text-white px-2 py-1 rounded text-sm hover:bg-gradient-to-b hover:from-orange-600 hover:to-yellow-600 transition">
-                    Menu
-                </a>
+    <!-- Jumbotron Section -->
+    <section id="home" class="min-h-screen pt-24 px-5 sm:px-10 lg:px-20  text-white">
+        <div class="flex flex-col lg:flex-row items-center mb-30">
+
+            <!-- Kiri: Teks -->
+            <div class="flex-1 text-left space-y-4 lg:space-y-6 lg:pr-10 order-2 lg:order-1">
+                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-snug">
+                    Selamat Datang <br />
+                    Di <span class="text-white">Kantin Sekolah</span>
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg">
+                    Berbelanja di kantin sekolah dengan makanan yang sehat dan bergizi!
+                </p>
+                <div class="flex gap-4 flex-wrap">
+                    <button class="bg-gradient-to-r from-[#5E5050] to-[#191919] shadow-sm hover:shadow-gray-200 text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full transition duration-300">
+                        Order now
+                    </button>
+                    <button class="bg-yellow-500 hover:shadow-gray-200 shadow-sm text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full transition duration-300">
+                        Order now
+                    </button>
+                </div>
             </div>
         </section>
         <!-- Section Slide Menu -->
          <section id="slider" class="min-h-screen">
-            <div class="slider-container relative w-full h-full overflow-hidden">
+            <div class="slider-container relative w-full h-full">
                 <!-- Slides -->
                 <div class="slides flex transition-transform duration-500 ease-in-out h-full" id="slides">
                     <!-- Slide 1 -->
@@ -45,25 +47,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 3 -->
-                    <div class="slide min-w-full h-full relative">
-                        <img src="{{ asset('imgs/sup-ayam.jpeg') }}" alt="Burger" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <h2 class="text-4xl font-bold mb-4">Sup Ayam</h2>
-                                <p class="text-xl">Sup dengan sayur sehat dan daging ayam berkualitas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="slide min-w-full h-full relative">
-                        <img src="{{ asset('imgs/es-teh.jpg') }}" alt="Burger" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <h2 class="text-4xl font-bold mb-4">Es Teh Manis</h2>
-                                <p class="text-xl">Es Teh Manis dengan gula alami</p>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-semibold mt-4 sm:mt-6">Nasi Kuning</h3>
+                    <p class="text-sm text-gray-300 mt-2">Cocok untuk sarapan dan mengenyangkan</p>
+                    <div class="mt-4 flex items-center justify-between px-4">
+                        <span class="bg-white text-black text-xs font-semibold px-3 py-1 rounded-full">Rp 5.000,00</span>
+                        <button class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-3 py-1 sm:px-4 sm:py-1 rounded-full text-sm shadow-md hover:scale-105 transition duration-300">Order</button>
                     </div>
                 </div>
                 <!-- Dots Indicator -->
@@ -74,51 +62,19 @@
                     <button   button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-200" onclick="currentSlide(4)"></button>
                 </div>
             </div>
-        </section>
+    </section>
     
         <!-- Section About -->
         <section id="about" class="min-h-screen flex flex-col justify-center items-center bg-white px-4">
-                
-            <div class="min-h-screen flex items-center justify-center mt-10">
-                <div class="max-w-4xl w-full">
-                    <!-- About Title -->
-                    <div class="text-center">
-                        <h1 class="inline-block px-6 py-2 bg-gradient-to-b from-orange-500 to-yellow-500 text-white text-3xl font-bold rounded-full">
-                        About
-                        </h1>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="flex flex-col lg:flex-row items-center justify-center mt-10">
-                        <!-- Text Content (Kiri) -->
-                        <div class="relative w-80 lg:w-180 flex-shrink-0 flex justify-center">
-                            <img src="{{ asset('imgs/shape.png') }}" alt="bulet" class="w-full h-100 rotate-20">
-                            <div class="absolute inset-0 flex items-center justify-center" style="clip-path: circle(50% at 50% 50%);">
-                                <div class="text-center text-white px-6">
-                                    <p class="text-sm md:text-base leading-relaxed">
-                                    Kantin sekolah menyediakan makanan dan minuman sehat <br>
-                                     bagi siswa, guru, dan staf untuk mendukung kesehatan dan konsentrasi belajar. <br>
-                                      Selain itu, kantin juga menjadi tempat interaksi sosial <br>
-                                      yang menciptakan suasana sekolah yang nyaman.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Chef Image (Kanan) -->
-                        <div class="flex justify-center flex-shrink-0 w-120">
-                            <img src="{{ asset('imgs/chef.png') }}" alt="Chef Kantin Sekolah" class="w-80 object-cover drop-shadow-2xl">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h1 class="inline-block px-6 py-2 bg-gradient-to-b from-orange-500 to-yellow-500 text-white text-3xl font-bold rounded-full">
+                About
+            </h1>
+            <p class="mt-4 text-gray-700 max-w-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            </p>
         </section>
     
     </body>
     </html>
     
 </x-layout>
-  
-
-
-

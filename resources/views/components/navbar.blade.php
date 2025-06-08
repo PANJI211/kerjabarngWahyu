@@ -11,11 +11,12 @@
 
     <!-- Sticky Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 w-full h- shadow-md z-50 m-0 p-0">
-    <div class="w-full px-6 py-3 flex items-center bg-gradient-to-r from-orange-500 to-yellow-500 justify-between text-white">
+    <div class="w-full px-6 py-3 flex items-center bg-[#55504D] justify-between text-white">
         <!-- Left menu -->
         <div class="flex space-x-6">
             <a href="#home" class="hover:text-blue-200 ">Home</a>
-            <a href="#about" class="hover:text-blue-200">About</a>
+            <a href="#about" class="hover:text-blue-200 transition duration-300">About</a>
+            <a href="#Special Menu" class="hover:text-blue-200 transition duration-300">Menu</a>
         </div>
 
         <!-- Center logo and text -->
