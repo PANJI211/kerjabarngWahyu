@@ -14,9 +14,9 @@
         <!-- Left Side: Menu for all users -->
         <div class="flex items-center space-x-2">
             @guest
-                <a href="#home" class="hover:text-blue-200 transition duration-300">Home</a>
-                <a href="#about" class="hover:text-blue-200 transition duration-300">About</a>
-                <a href="#Special Menu" class="hover:text-blue-200 transition duration-300">Menu</a>
+                <a href="#home" class="hover:text-blue-200 transition duration-300 text-[12px] lg:text-base">Home</a>
+                <a href="#about" class="hover:text-blue-200 transition duration-300 text-[12px] lg:text-base">About</a>
+                <a href="#Special Menu" class="hover:text-blue-200 transition duration-300 text-[12px] lg:text-base">Menu</a>
             @endguest
 
             @auth
@@ -36,18 +36,14 @@
         @endguest
 
         <!-- Right Side: Auth-related links -->
-<<<<<<< HEAD
+
         <div class="flex items-center space-x-0.5 lg:space-x-3 ">
             @guest
                 <a href="{{ route('login') }}" class="hover:text-blue-200 transition duration-300 text-[12px] lg:text-base">Sign In</a>
                 <a href="{{ route('Register') }}" class="hover:text-blue-200 transition duration-300 text-[12px]  lg:text-base">Sign Up</a>
-=======
+                @endguest
         <div class="flex items-center space-x-0.5 gap-4">
-            @guest
-                <a href="{{ route('login') }}" class="hover:text-blue-200 transition duration-300">Sign In</a>
-                <a href="{{ route('Register') }}" class="hover:text-blue-200 transition duration-300">Sign Up</a>
->>>>>>> 81503c7983cbbf13703531be247ea68b07684779
-            @endguest
+          
 
             @auth
                 <form action="{{ route('logout') }}" method="POST">
