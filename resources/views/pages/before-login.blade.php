@@ -34,7 +34,7 @@
     </section>
    
     <!-- About Section -->
-    <section id="about" class="min-h-screen  text-white px-5 sm:px-10 lg:px-20  flex flex-col lg:flex-row items-center justify-between gap-10 lg:pt-0">
+    <section id="about" class="min-h-screen  text-white px-5 sm:px-10 lg:px-20  flex flex-col lg:flex-row items-center justify-between gap-10 c:\Users\Administrator\AppData\Local\Packages\MicrosoftWindows.Client.Core_cw5n1h2txyewy\TempState\ScreenClip\{EA6889A2-1AFB-48F9-AA0F-6CF8375ED912}.pnglg:pt-0">
         <!-- Gambar Chef -->
         <div class="flex justify-center items-center lg:justify-start flex-1">
             <div class="flex items-center justify-center p-2 border-4 border-orange-500 rounded-lg w-full sm:w-xl h-48">
@@ -55,7 +55,7 @@
 
     {{-- special menu --}}
     <section id="Special Menu" class="min-h-screen flex-1 text-center lg:text-left"> 
-          <h1 class="text-center text-3xl text-white font-bold mb-20">Special Menu</h1>
+          <h1 class="text-center text-3xl text-white font-bold mb-20 pt-24">Special Menu</h1>
            <div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center px-6 lg:px-0 ">
                 <!-- Card Makanan -->
