@@ -57,7 +57,7 @@
     <section id="Special Menu" class="min-h-screen flex-1 text-center lg:text-left"> 
           <h1 class="text-center text-3xl text-white font-bold mb-20">Special Menu</h1>
            <div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center ">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center px-6 lg:px-0 ">
                 <!-- Card Makanan -->
                 @for ($i = 0; $i < 4; $i++)
                     <div class="bg-gradient-to-b from-[#5E5050] to-[#191919] rounded-xl p-4 shadow-lg text-center w-full sm:w-64">
