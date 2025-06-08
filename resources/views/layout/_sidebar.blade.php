@@ -4,7 +4,7 @@
         <div class="text-center">
             <div class="text-xl font-bold">Kantin Sekolah</div>
             <div class="text-sm text-gray-400 mt-1">
-                Halo, {{ auth()->user()->name ?? 'Admin' }}
+                Halo, {{ auth()->user()->name ?? 'Admin' }}f
             </div>
         </div>
     </div>

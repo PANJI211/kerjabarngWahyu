@@ -4,17 +4,13 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
-
-
-
-
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'check_role:admin'])->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
+
 Route::get('/Home', function () {
     return view("pages.after-login");
-})->name('home');
-
-});
+})->name('home')->middleware(['auth','check_role:amdin,user']);
 
 
 Route::get('/logout',[Authcontroller::class, 'logout']);
