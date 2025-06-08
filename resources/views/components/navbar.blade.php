@@ -21,8 +21,8 @@
 
             @auth
                 <a href="{{ route('home') }}" class="hover:text-blue-200 transition duration-300">Home</a>
-                <a href="" class="hover:text-blue-200 transition duration-300">Foods</a>
-                <a href="" class="hover:text-blue-200 transition duration-300">Categories</a>
+                <a href="#Menu" class="hover:text-blue-200 transition duration-300">Foods</a>
+                <a href="#Categories" class="hover:text-blue-200 transition duration-300">Categories</a>
                
             @endauth
         </div>
