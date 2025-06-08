@@ -1,7 +1,7 @@
 <x-layout>
     <!-- Jumbotron Section -->
-    <section id="home" class="min-h-screen  px-5 sm:px-10 lg:px-20  text-white">
-        <div class="flex flex-col lg:flex-row items-centern pt-44 ">
+    <section id="home" class="min-h-screen  px-5 sm:px-10 lg:px-20 text-white">
+        <div class="flex flex-col lg:flex-row items-center pt-48 ">
 
             <!-- Kiri: Teks -->
             <div class="flex-1 text-left space-y-4 lg:space-y-6 lg:pr-10 order-2 lg:order-1">
@@ -13,7 +13,7 @@
                     Berbelanja di kantin sekolah dengan makanan yang sehat dan bergizi!
                 </p>
                 <div class="flex gap-4 flex-wrap">
-                    <button class="bg-gradient-to-r from-[#5E5050] to-[#191919] shadow-sm hover:shadow-gray-200 text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full transition duration-300">
+                    <button class="bg-[#5E5050] shadow-sm hover:shadow-gray-200 text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full transition duration-300">
                         Order now
                     </button>
                     <button class="bg-yellow-500 hover:shadow-gray-200 shadow-sm text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full transition duration-300">
@@ -23,18 +23,18 @@
             </div>
 
             <!-- Kanan: Gambar -->
-             <div class="flex-1 flex justify-center items-center mb-6 lg:mb-0 order-1 lg:order-2">
+             <div class="flex-1 flex justify-center items-center  lg:mb-0 order-1 lg:order-2">
       <div class="w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 rounded-full border-4 sm:border-8 border-orange-500 overflow-hidden shadow-xl">
         <img src="{{ asset('imgs/alpukat.jpg') }}" alt="Makanan" class="w-full h-full object-cover" />
       </div>
-    </div>
+    </div>  
         </div>
 
    
     </section>
    
     <!-- About Section -->
-    <section id="about" class="min-h-screen  text-white px-5 sm:px-10 lg:px-20  flex flex-col lg:flex-row items-center justify-between gap-10">
+    <section id="about" class="min-h-screen  text-white px-5 sm:px-10 lg:px-20  flex flex-col lg:flex-row items-center justify-between gap-10 lg:pt-0">
         <!-- Gambar Chef -->
         <div class="flex justify-center items-center lg:justify-start flex-1">
             <div class="flex items-center justify-center p-2 border-4 border-orange-500 rounded-lg w-full sm:w-xl h-48">
@@ -60,7 +60,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center px-6 lg:px-0 ">
                 <!-- Card Makanan -->
                 @for ($i = 0; $i < 4; $i++)
-                    <div class="bg-gradient-to-b from-[#5E5050] to-[#191919] rounded-xl p-4 shadow-lg text-center w-full sm:w-64">
+                    <div class="bg-[#5E5050] rounded-xl p-4 shadow-lg text-center w-full sm:w-64">
                         <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-orange-500 mx-auto -mt-12 overflow-hidden shadow-md">
                             <img src="{{ asset('imgs/es-teh.jpg') }}" alt="Nasi Kuning" class="w-full h-full object-cover">
                         </div>
