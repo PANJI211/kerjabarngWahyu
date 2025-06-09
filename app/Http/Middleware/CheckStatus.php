@@ -17,7 +17,7 @@ class CheckStatus
     {
         if($request->user()->status == 'active  '){
             return $next($request);
-        }elseif($request-user()->status == 'verify'){
+        }elseif($request->user()->status == 'verify'){
             return Redirect('/verify');
         }
         return $next($request);
