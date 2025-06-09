@@ -12,12 +12,10 @@ Route::middleware(['auth', 'check_role:admin'])->group(function(){
 
 Route::get('/admin', fn () => 'halaman admin');
 
-<<<<<<< HEAD
 Route::get('/Home', function () {
     return view("pages.after-login");
 })->name('home')->middleware(['auth','check_role:admin,user',]);
-=======
->>>>>>> 29906deec2fc2688923aac9381818917eec66596
+
 
 
 Route::get('/logout',[Authcontroller::class, 'logout']);
