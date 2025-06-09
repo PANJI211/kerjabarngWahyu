@@ -12,9 +12,6 @@ Route::middleware(['auth', 'check_role:admin'])->group(function(){
 
 Route::get('/admin', fn () => 'halaman admin');
 
-Route::get('/Home', function () {
-    return view("pages.after-login");
-})->name('home')->middleware(['auth','check_role:admin,user']);
 
 
 Route::get('/logout',[Authcontroller::class, 'logout']);
@@ -22,6 +19,13 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'check_role:user'])->group(function(){
    Route::get('/verify',[VerificationController::class, 'index']);
+   Route::post('/verify',[VerificationController::class, 'store']);
+});
+Route::middleware(['auth', 'check_role:user,admin', 'check_status'])->group(function(){
+    
+Route::get('/Home', function () {
+    return view("pages.after-login");
+})->name('home');
 });
 
 Route::middleware('guest')->group(function(){
