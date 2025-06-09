@@ -17,9 +17,13 @@
         </a>
 
         <!-- Admin -->
-        <a href="" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('admin*') ? 'bg-gray-700' : '' }}">
+         @if (auth()->user()->role =='admin')
+         <a href="/admin" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('admin*') ? 'bg-gray-700' : '' }}">
             Admin
         </a>
+         @endif   
+
+      
 
         <!-- Category -->
         <a href="" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('category*') ? 'bg-gray-700' : '' }}">

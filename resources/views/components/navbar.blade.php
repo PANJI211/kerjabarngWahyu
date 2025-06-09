@@ -9,8 +9,8 @@
 </head>
 <body class="bg-gray-100">
 
-  <nav id="navbar" class="fixed top-0 left-0 right-0 w-full shadow-md z-50 bg-[#55504D] text-white">
-    <div class="w-full px-6 py-3 flex items-center justify-between bg-[#55504D]">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 w-full shadow-md z-50 bg-[#] text-white">
+    <div class="w-full px-6 py-3 flex items-center justify-between ">
         <!-- Left Side: Menu for all users -->
         <div class="flex items-center space-x-2">
             @guest
@@ -61,7 +61,7 @@
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
-    navbar.classList.add('bg-white', 'shadow-md');
+    navbar.classList.add('bg-[#55504D]', 'shadow-md');
     navbar.classList.remove('bg-transparent');
 
     // Ubah warna link jadi hitam saat ada background

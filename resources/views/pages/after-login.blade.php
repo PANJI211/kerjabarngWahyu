@@ -5,7 +5,7 @@
             <div class="slides flex transition-transform duration-500 ease-in-out h-full" id="slides">
                 <!-- Slide 1 -->
                 <div class="slide min-w-full h-full relative">
-                    <img src="{{asset('/imgs/burger.jpg')}}" alt="Burger" class="w-full h-full object-cover">
+                    <img src="{{asset('imgs/burger.jpg')}}" alt="Burger" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
                         <div class="text-center text-white">
                         </div>
@@ -14,7 +14,7 @@
                 
                 <!-- Slide 2 -->
                  <div class="slide min-w-full h-full relative">
-                    <img src="{{asset('/imgs/sate.jpg')}}" alt="Sate" class="w-full h-full object-cover">
+                    <img src="{{asset('imgs/sate.jpg')}}" alt="Sate" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
                         <div class="text-center text-white">
                         </div>
@@ -23,7 +23,7 @@
                 
                 <!-- Slide 3 -->
                 <div class="slide min-w-full h-full relative">
-                    <img src="{{asset('/imgs/sup-ayam.jpeg')}}" alt="Sup" class="w-full h-full object-cover">
+                    <img src="{{asset('imgs/sup-ayam.jpeg')}}" alt="Sup" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
                         <div class="text-center text-white">
                         </div>
@@ -32,7 +32,7 @@
                 
                 <!-- Slide 4 -->
                  <div class="slide min-w-full h-full relative">
-                    <img src="{{asset('/imgs/es-teh.jpg')}}" alt="Es Teh" class="w-full h-full object-cover">
+                    <img src="{{asset('imgs/es-teh.jpg')}}" alt="Es Teh" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
                         <div class="text-center text-white">
                         </div>
