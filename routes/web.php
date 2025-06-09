@@ -13,7 +13,7 @@ Route::get('/admin', fn () => 'halaman admin');
 
 Route::get('/Home', function () {
     return view("pages.after-login");
-})->name('home')->middleware(['auth','check_role:amdin,user']);
+})->name('home')->middleware(['auth','check_role:admin,user', 'check_status']);
 
 
 Route::get('/logout',[Authcontroller::class, 'logout']);
