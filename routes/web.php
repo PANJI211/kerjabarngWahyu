@@ -5,8 +5,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\VerificationController;
+use App\Http\Controllers\special_menuController;
 
 Route::middleware(['auth', 'check_role:admin'])->group(function(){
+
+    Route::get('special_menus', [special_menuController::class, 'index'])->name('special_menus.index');
+    Route::get('special_menus/create', [special_menuController::class, 'create'])->name('special_menus.create');
+    Route::post('special_menus', [special_menuController::class, 'store'])->name('special_menus.store');
+    Route::get('special_menus/{special_menu}/edit', [special_menuController::class, 'edit'])->name('special_menus.edit');
+    Route::put('special_menus/{special_menu}', [special_menuController::class, 'update'])->name('special_menus.update');
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 
