@@ -10,6 +10,7 @@ use App\Mail\OtpEmail;
 use Illuminate\Support\Facades\Auth;
 
 
+
 class VerificationController extends Controller
 {
     public function index(){
@@ -20,9 +21,13 @@ class VerificationController extends Controller
     public function show($unique_id){
         $verify = Verification::whereUserId(Auth::user()->id)->whereUniqueId($unique_id)
         ->whereStatus('active')->count();
-       if(!verfy) abort(404);
-       return view('verification.index', compact(compapct(unique_id)));
+        if(!$verify) abort(404);
+        return view('verification.show', compact('unique_id'));
 
+    }
+
+    public function update(Request $request, $unique_id){
+        dd($request->all());
     }
 
     public function store(Request $request){

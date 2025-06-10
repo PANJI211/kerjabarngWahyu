@@ -33,6 +33,7 @@ Route::middleware(['auth', 'check_role:user'])->group(function(){
    Route::get('/verify',[VerificationController::class, 'index']);
    Route::post('/verify',[VerificationController::class, 'store']);
    Route::get('/verify/{unique_id}',[VerificationController::class, 'show']);
+   Route::put('/verify/{unique_id}',[VerificationController::class, 'update']);
 });
 Route::middleware(['auth', 'check_role:user,admin', 'check_status'])->group(function(){
     
