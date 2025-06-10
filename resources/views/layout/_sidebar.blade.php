@@ -30,9 +30,12 @@
             Category
         </a>
 
-        <!-- Food -->
+        <!-- Paket -->
+        <a href="special_menus" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('food*') ? 'bg-gray-700' : '' }}">
+            Special Menu
+        </a>
         <a href="" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('food*') ? 'bg-gray-700' : '' }}">
-            Food
+            Paket Hemat
         </a>
 
         <!-- Logout -->
