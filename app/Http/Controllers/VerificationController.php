@@ -7,13 +7,22 @@ use App\Models\User;
 use App\Models\Verification;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\OtpEmail;
-
+use Illuminate\Support\Facades\Auth;
 
 
 class VerificationController extends Controller
 {
     public function index(){
         return view('verification.index');
+    }
+
+    // show
+    public function show($unique_id){
+        $verify = Verification::whereUserId(Auth::user()->id)->whereUniqueId($unique_id)
+        ->whereStatus('active')->count();
+       if(!verfy) abort(404);
+       return view('verification.index', compact(compapct(unique_id)));
+
     }
 
     public function store(Request $request){
