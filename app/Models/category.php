@@ -8,9 +8,7 @@ class category extends Model
 {
     protected $fillable = [
         'nama_kategori',
-        'harga',
         'deskripsi',
-        'gambar',
     ];
 
 }
