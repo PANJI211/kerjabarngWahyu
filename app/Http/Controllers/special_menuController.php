@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\special_menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class special_menuController extends Controller
 {
@@ -58,12 +59,24 @@ class special_menuController extends Controller
 
         if($request->file('gambar')) {
 
-            Storage::disk('local')->delete('public/', $product->gambar);
+            Storage::disk('local')->delete('public/', $special_menu->gambar);
             $gambar = $request->file('gambar');
             $gambar->storeAs('public', $gambar->hashName());
         }
 
         $special_menu->update();
+
+        return redirect('/special_menus');
+    }
+
+    public function destroy(special_menu $special_menu)
+    {
+         if ($special_menu->gambar && Storage::exists($special_menu->gambar)) {
+        Storage::delete($special_menu->gambar);
+
+         }
+
+        $special_menu->delete();
 
         return redirect('/special_menus');
     }

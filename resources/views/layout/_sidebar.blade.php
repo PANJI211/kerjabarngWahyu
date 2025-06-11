@@ -17,6 +17,7 @@
         </a>
 
         <!-- Admin -->
+
         @if (auth()->user()->role == 'admin')
             <a href="/admin" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('admin*') ? 'bg-gray-700' : '' }}">
                 Admin
@@ -24,16 +25,13 @@
         @endif
 
         <!-- Category -->
-        <a href="" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('category*') ? 'bg-gray-700' : '' }}">
+        <a href="categories" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('category*') ? 'bg-gray-700' : '' }}">
             Category
         </a>
 
         <!-- Paket -->
         <a href="special_menus" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('food*') ? 'bg-gray-700' : '' }}">
             Special Menu
-        </a>
-        <a href="" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('food*') ? 'bg-gray-700' : '' }}">
-            Paket Hemat
         </a>
 
         <!-- Logout -->
