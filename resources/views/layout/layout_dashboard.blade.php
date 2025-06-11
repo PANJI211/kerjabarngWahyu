@@ -16,7 +16,7 @@
         @include('layout._sidebar')
 
         <!-- Main Content Area -->
-        <div class="flex-1 flex flex-col md:ml-64"> <!-- Offset for sidebar -->
+        <div class="flex-1 flex flex-col "> <!-- Offset for sidebar -->
             <!-- Navbar -->
             @include('layout._navbar')
 
