@@ -82,3 +82,5 @@ let currentIndex = 0;
                 nextSlide();
             }
         });
+
+

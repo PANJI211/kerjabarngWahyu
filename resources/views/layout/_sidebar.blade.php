@@ -1,4 +1,4 @@
-<aside class="w-64 bg-gray-800 text-white h-screen  left-0 top-0 overflow-y-auto">
+<aside id="sidebar" class="w-64 bg-gray-800 text-white h-screen fixed top-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 ease-in-out overflow-y-auto z-40">
     <!-- Header -->
     <div class="flex items-center justify-center py-6 border-b border-gray-700">
         <div class="text-center">
@@ -17,13 +17,11 @@
         </a>
 
         <!-- Admin -->
-         @if (auth()->user()->role =='admin')
-         <a href="/admin" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('admin*') ? 'bg-gray-700' : '' }}">
-            Admin
-        </a>
-         @endif   
-
-      
+        @if (auth()->user()->role == 'admin')
+            <a href="/admin" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('admin*') ? 'bg-gray-700' : '' }}">
+                Admin
+            </a>
+        @endif
 
         <!-- Category -->
         <a href="" class="block py-3 px-6 hover:bg-gray-700 {{ request()->is('category*') ? 'bg-gray-700' : '' }}">
@@ -47,3 +45,28 @@
         </form>
     </nav>
 </aside>
+
+<script>
+    
+       document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menu-toggle');
+        const overlay = document.getElementById('overlay');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+                sidebar.classList.toggle('translate-x-0');
+                overlay.classList.toggle('hidden');
+            });
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+                sidebar.classList.remove('translate-x-0');
+                overlay.classList.add('hidden');
+            });
+        }
+    });
+</script>

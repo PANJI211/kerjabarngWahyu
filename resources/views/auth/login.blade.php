@@ -6,73 +6,66 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Document</title>
 </head>
-<body class="bg-white flex items-center justify-center min-h-screen">
-    <img src="{{ asset('imgs/komtol.png') }}" alt=""
-    class="absolute left-30 w-150 rotate-25 -z-10">
-    <img src="{{ asset('imgs/ayan.png') }}" alt=""
-    class="absolute right-30 w-150 -z-10 -rotate-15 ">
-   
-      <!-- Left (Form) -->
-      <div class="bg-gradient-to-b from-orange-500 to-yellow-500 text-white max-w-2xl h-[500px] p-10 rounded-2xl items-center flex-1">
-
-        
-     @if (session('failed'))
-      <div class="mb-4 p-4 rounded-lg bg-red-100 text-red-700 border border-red-300">
-        <strong>Login Failed:</strong> {{ session('failed') }}
-      </div>
-    @endif
-        <h2 class="text-4xl font-bold mb-6 text-center">Sign In</h2>
-        <form class="space-y-4" action="/login" method="post" >
-          @csrf
-
-          {{-- email --}}
-          @error('email')
-          <small class="text-danger">{{$message}}</small>
-          @enderror
-          <div>
-            <label class="block font-semibold mb-1" for="Email">Email</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Email"
-              class="w-full px-4 py-2 rounded-md text-black bg-white focus:outline-none"
-            />
-          </div>
-
-          {{-- password --}}
-          @error('password')
-          <small class="text-danger">{{$message}}</small>
-          @enderror
-          <div>
-            <label class="block font-semibold mb-1" for="password">Password</label>
-            <input
-            id="password"
-            type="password"
-            name="password"
-            placeholder="Password"
-            class="w-full px-4 py-2 rounded-md text-black bg-white focus:outline-none"
-          />
-            <div class="text-sm text-right mt-1">
-              <a href="#" class="text-white underline">Forgot <strong>Password?</strong></a>
+<body class="bg-gradient-to-br from-orange-400 via-orange-500 to-yellow-500 min-h-screen flex items-center justify-center p-4">
+    
+    <div class="w-full max-w-md">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            
+            @if (session('failed'))
+            <div class="mb-6 p-4 rounded-lg bg-red-50 text-red-700 border border-red-200">
+                <strong>Login Failed:</strong> {{ session('failed') }}
             </div>
-          </div>
-          
-            <button
-            type="submit"
-            class="w-full bg-white text-orange-500 font-bold py-2 rounded-md hover:bg-gray-100 transition"
-          >
-            Sign In
-          </button>
-          
-          
-        </form>
-        <p class="mt-6 text-center text-white">
-          Don't have an account?
-          <a href="{{ '/Register' }}" class="underline font-semibold">Sign Up</a>
-        </p>
-      </div>
+            @endif
+            
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Sign In</h2>
+            
+            <form class="space-y-6" action="/login" method="post">
+                @csrf
 
-  
-  </body>
+                <div>
+                    @error('email')
+                    <small class="text-red-500 text-sm">{{$message}}</small>
+                    @enderror
+                    <label class="block font-semibold mb-2 text-gray-700" for="email">Email</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                </div>
+
+                <div>
+                    @error('password')
+                    <small class="text-red-500 text-sm">{{$message}}</small>
+                    @enderror
+                    <label class="block font-semibold mb-2 text-gray-700" for="password">Password</label>
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                    />
+                    <div class="text-sm text-right mt-2">
+                        <a href="#" class="text-orange-600 hover:text-orange-800 underline">Forgot <strong>Password?</strong></a>
+                    </div>
+                </div>
+                
+                <button
+                    type="submit"
+                    class="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                >
+                    Sign In
+                </button>
+            </form>
+            
+            <p class="mt-6 text-center text-gray-600">
+                Don't have an account?
+                <a href="{{ '/Register' }}" class="text-orange-600 hover:text-orange-800 underline font-semibold">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</body>
 </html>

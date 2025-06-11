@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    @vite('resources/css/app.css')
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite('resources/css/app.css') <!-- Or include Tailwind via CDN if not using Vite -->
+    <title>@yield('title', 'Dashboard')</title>
 </head>
-<body class="bg-gray-100 text-gray-900 h-screen">
+<body class="bg-gray-100 min-h-screen">
 
-    <div class="flex h-screen overflow-hidden">
-        {{-- Sidebar --}}
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-30"></div>
+
+    <div class="flex">
+        <!-- Sidebar -->
         @include('layout._sidebar')
 
         <!-- Main Content Area -->
-        <div class="flex flex-col flex-1 overflow-hidden">
-            {{-- Navbar --}}
+        <div class="flex-1 flex flex-col md:ml-64"> <!-- Offset for sidebar -->
+            <!-- Navbar -->
             @include('layout._navbar')
 
-            <!-- Scrollable Content -->
-            <main class="flex-1 p-6 bg-gray-100 overflow-y-auto">
+            <!-- Page Content -->
+            <main class="p-6">
                 @yield('content')
             </main>
         </div>
     </div>
 
+    <!-- Toggle Script -->
+    
 </body>
 </html>
