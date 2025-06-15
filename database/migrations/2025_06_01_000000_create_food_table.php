@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stocks', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('food_id')->constrained('food')->onDelete('cascade'); // hanya ini cukup
-            $table->string('nama_makanan');
-            $table->integer('stok');
-            $table->text('deskripsi')->nullable();
+        Schema::create('food', function (Blueprint $table) {
+            $table->id(); // primary key
+            $table->string('nama'); // nama makanan/minuman
+            $table->text('deskripsi')->nullable(); // deskripsi (optional)
+            $table->string('gambar')->nullable(); // untuk menyimpan nama file gambar
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('stocks');
+        Schema::dropIfExists('food');
     }
 };

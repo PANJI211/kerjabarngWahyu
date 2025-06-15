@@ -27,6 +27,11 @@ class User extends Authenticatable
         'role'
     ];
 
+    public function bookings()
+{
+    return $this->hasMany(Book::class);
+}
+
     
 
     /**
